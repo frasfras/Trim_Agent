@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --color-warm-paper: #FDFBF7;
+  --color-warm-paper-dark: #F4F1EA;
+  --color-warm-paper-light: #F9F7F2;
+  --color-ink-black: #1A1A1A;
+  --color-brass: #B58E58;
+  --color-brass-dark: #9C7642;
+  --color-steel-blue: #4682B4;
+  --color-barber-red: #D93B3B;
+  --color-barber-red-dark: #B52626;
+}
+
+/* Custom styles for nice scrollbars and paper aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-warm-paper-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-black);
+  border: 2px solid var(--color-warm-paper-dark);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brass);
+}
+
+body {
+  background-color: #1A1A1A; /* ink-black base for surrounding outer canvas */
+  color: #1A1A1A;
+  font-family: var(--font-sans);
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100px 0;
+  }
+}
+
+.barber-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #D93B3B,
+    #D93B3B 10px,
+    #FDFBF7 10px,
+    #FDFBF7 20px,
+    #4682B4 20px,
+    #4682B4 30px,
+    #FDFBF7 30px,
+    #FDFBF7 40px
+  );
+  background-size: 56.5px 56.5px;
+}
+
+.animate-barberpole {
+  background: repeating-linear-gradient(
+    -45deg,
+    #D93B3B 0px,
+    #D93B3B 12px,
+    #FDFBF7 12px,
+    #FDFBF7 24px,
+    #4682B4 24px,
+    #4682B4 36px,
+    #FDFBF7 36px,
+    #FDFBF7 48px
+  );
+  background-size: 68px 68px;
+  animation: barberpole 4s linear infinite;
+}
+
+

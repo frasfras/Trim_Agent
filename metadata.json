@@ -1,0 +1,6 @@
+{
+  "name": "Barbershop AI Agent",
+  "description": "An interactive AI chat companion for barbershop appointments, services, and queries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
